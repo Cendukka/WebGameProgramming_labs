@@ -25,6 +25,7 @@ void Game::createGameObjects()
 	m_pPlayer = new Player();
 	m_pIsland = new Island();
 	m_pOcean = new Ocean();
+	m_pEnemy = new Enemy();
 
 	for (size_t i = 0; i < m_cloudNum; i++)
 	{
@@ -94,6 +95,7 @@ void Game::render()
 	m_pOcean->draw();
 	m_pIsland->draw();
 	m_pPlayer->draw();
+	m_pEnemy->draw();
 
 	for (Cloud* cloud : m_pClouds) {
 		cloud->draw();
@@ -107,6 +109,7 @@ void Game::update()
 	m_pPlayer->update();
 	m_pIsland->update();
 	m_pOcean->update();
+	m_pEnemy->update();
 	
 	Collision::squaredRadiusCheck(m_pPlayer, m_pIsland);
 

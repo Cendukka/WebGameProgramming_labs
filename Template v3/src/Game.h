@@ -18,6 +18,7 @@
 #include "Island.h"
 #include "Ocean.h"
 #include "Cloud.h"
+#include "Enemy.h"
 
 class Game
 {
@@ -71,6 +72,7 @@ private:
 	Player* m_pPlayer;
 	Island* m_pIsland;
 	Ocean* m_pOcean;
+	Enemy* m_pEnemy;
 
 	// cloud game objects
 	int m_cloudNum = 3;
